@@ -30,7 +30,6 @@ The project includes **data preprocessing, model training, model evaluation, vis
 - Pandas
 - Scikit-learn
 - Matplotlib
-- Seaborn
 - Streamlit
 
 ---
@@ -127,6 +126,4 @@ Both **Linear Regression** and **Random Forest Regressor** produced meaningful p
 ## Conclusion
 This project demonstrates how machine learning can be used to predict employee salaries using regression techniques. It also shows how interactive dashboards can make data analysis and prediction easier for users.
 
----
 
-## Thank You
