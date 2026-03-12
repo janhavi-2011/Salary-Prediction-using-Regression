@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -9,9 +8,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score, mean_squared_error
 
-
 # Page Config
-
 
 st.set_page_config(page_title="Salary Prediction", layout="wide")
 
@@ -19,14 +16,12 @@ st.title(" Salary Prediction Dashboard")
 
 # Sidebar
 
-
 menu = st.sidebar.radio(
     "Navigation",
     ["Home", "Dataset", "Visualization", "Model Comparison", "Predict Salary"]
 )
 
 # Load Dataset
-
 
 data = pd.read_csv("Salary Data.csv")
 
@@ -41,9 +36,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=40
 )
 
-
 # Train Models
-
 
 lr = LinearRegression()
 rf = RandomForestRegressor()
@@ -56,7 +49,6 @@ rf_pred = rf.predict(X_test)
 
 
 # HOME
-
 
 if menu == "Home":
 
@@ -200,5 +192,6 @@ elif menu == "Predict Salary":
             prediction = lr.predict(new_data)
         else:
             prediction = rf.predict(new_data)
+
 
         st.success(f"Predicted Salary: ${prediction[0]:,.2f}")
